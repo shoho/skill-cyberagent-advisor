@@ -10,8 +10,11 @@
 
 ## インストール
 
+リポジトリを clone し、`~/.claude/skills/` へシンボリックリンクを張ると Claude Code が認識します。
+
 ```bash
-claude skill add --from shoho/cyberagent-advisor
+git clone git@github.com:shoho/skill-cyberagent-advisor.git ~/Development/Skills/skill-cyberagent-advisor
+ln -s ~/Development/Skills/skill-cyberagent-advisor ~/.claude/skills/cyberagent-advisor
 ```
 
 ## 使い方
@@ -61,10 +64,9 @@ AI活用を全社で推進したい。CAのAI戦略を参考にしたい。
 ```
 .
 ├── SKILL.md                          # スキル定義（プロンプト・回答手順・回答ルール）
+├── README.md
 └── references/
-    ├── knowledge-base.md             # ナレッジベース（14セクション、約400行）
-    └── .claude/
-        └── settings.local.json       # ローカル設定
+    └── knowledge-base.md             # ナレッジベース（14セクション、約400行）
 ```
 
 ## ナレッジベースの内容
